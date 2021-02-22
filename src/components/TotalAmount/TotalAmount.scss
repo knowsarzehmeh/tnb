@@ -1,0 +1,14 @@
+.TotalAmount {
+  white-space: nowrap;
+
+  &__amount {
+    color: var(--color-tertiary);
+    font-size: var(--font-size-medium);
+    font-weight: 700;
+    margin-top: 8px;
+  }
+
+  &__title {
+    color: var(--color-sail-gray-500);
+  }
+}
