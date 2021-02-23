@@ -121,6 +121,16 @@
       "completed_date": "12/27/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Project's openings to the website",
+      "issue_id": "1270",
+      "pr_id": "1275",
+      "completed_by": "AbhayAysola",
+      "completed_date": "2/15/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -133,6 +143,18 @@
       "completed_date": "11/20/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    }
+  ],
+  "AkinAguda": [
+    {
+      "repository": "Website",
+      "title": "Mobile drop down icon not clickable",
+      "issue_id": "1179",
+      "pr_id": "1190",
+      "completed_by": "AkinAguda",
+      "completed_date": "1/26/21",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
     }
   ],
   "Akshit1311": [
@@ -154,6 +176,18 @@
       "completed_by": "Akshit1311",
       "completed_date": "11/13/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "AmrOuf": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1276",
+      "pr_id": "1295",
+      "completed_by": "AmrOuf",
+      "completed_date": "2/16/21",
+      "amount_paid": "250",
       "bug_bounty": "FALSE"
     }
   ],
@@ -1183,6 +1217,76 @@
       "completed_date": "1/21/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor",
+      "issue_id": "1221",
+      "pr_id": "1222",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/25/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor from Teams Page",
+      "issue_id": "1210",
+      "pr_id": "1213",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/21/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Move me as Marketing Lead",
+      "issue_id": "1233",
+      "pr_id": "1236",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/31/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1231",
+      "pr_id": "1232",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/02/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1144",
+      "pr_id": "1145",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1237",
+      "pr_id": "1242",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1238",
+      "pr_id": "1243",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "Ramin-RX7": [
@@ -1835,6 +1939,16 @@
       "completed_date": "12/14/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Hiring",
+      "issue_id": "1257",
+      "pr_id": "1258",
+      "completed_by": "aayushi14",
+      "completed_date": "2/04/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "aeronye": [
@@ -2285,6 +2399,18 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "bossajie": [
+    {
+      "repository": "Website",
+      "title": "Update twitter social link and added instagram social link",
+      "issue_id": "1263",
+      "pr_id": "1262",
+      "completed_by": "bossajie",
+      "completed_date": "2/09/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "brian316": [
     {
       "repository": "Account-Manager",
@@ -2677,6 +2803,76 @@
       "completed_date": "12/20/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "update discord social link with new custom link",
+      "issue_id": "1247",
+      "pr_id": "1246",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/02/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic (includes 3)",
+      "issue_id": "92",
+      "pr_id": "",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "1/28/21",
+      "amount_paid": "3000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1288",
+      "pr_id": "1291",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/15/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1261",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1273",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1280",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1281",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "donmbelembe": [
@@ -2759,6 +2955,18 @@
       "pr_id": "902",
       "completed_by": "gatvay23924",
       "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "gsonly": [
+    {
+      "repository": "Website",
+      "title": "Put \"Hello World\" in your OWN language!",
+      "issue_id": "351",
+      "pr_id": "1158",
+      "completed_by": "gsonly",
+      "completed_date": "2/03/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -3503,6 +3711,16 @@
       "completed_date": "1/19/21",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add link to blog on website",
+      "issue_id": "1283",
+      "pr_id": "1284",
+      "completed_by": "jamessspanggg",
+      "completed_date": "2/15/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3723,6 +3941,16 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Update Bank OVERVIEW & Purchase Confirmation Service ModaL",
+      "issue_id": "120",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "1/28/21",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
     }
@@ -4393,6 +4621,16 @@
       "pr_id": "104",
       "completed_by": "nishp77",
       "completed_date": "12/29/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST request for Crawl in Bank API",
+      "issue_id": "97",
+      "pr_id": "109",
+      "completed_by": "nishp77",
+      "completed_date": "1/3/21",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -5145,6 +5383,16 @@
       "completed_date": "12/31/20",
       "amount_paid": "10000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor",
+      "issue_id": "1300",
+      "pr_id": "1303",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "2/16/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "tomijaga": [
@@ -5166,6 +5414,26 @@
       "completed_by": "tomijaga",
       "completed_date": "12/17/20",
       "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement Pagination for GET endpoints in Bank API",
+      "issue_id": "98",
+      "pr_id": "111",
+      "completed_by": "tomijaga",
+      "completed_date": "1/9/21",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET request for Config in Primary Validator API",
+      "issue_id": "117",
+      "pr_id": "121",
+      "completed_by": "tomijaga",
+      "completed_date": "1/25/21",
+      "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
   ],

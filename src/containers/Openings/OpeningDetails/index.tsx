@@ -8,9 +8,10 @@ import {SocialMedia} from 'types/social-media';
 import './OpeningDetails.scss';
 
 const customLinks = {
-  [SocialMedia.discord]: 'https://discord.gg/fdj2EMvSYx',
+  [SocialMedia.discord]: 'https://discord.gg/thenewboston',
   [SocialMedia.facebook]: '',
   [SocialMedia.github]: '',
+  [SocialMedia.instagram]: '',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
   [SocialMedia.slack]: '',
@@ -61,6 +62,13 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
   const renderContent = (): ReactNode => (
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
+      {opening.project && (
+        <div className="OpeningDetails__proposal">
+          Hiring for{' '}
+          {opening.project.url ? <A href={opening.project.url}>{opening.project.name}</A> : <>{opening.project.name}</>}{' '}
+          under Project Proposals.
+        </div>
+      )}
       <div className="OpeningDetails__description">{opening.description}</div>
       {renderStringList(opening.responsibilities, 'Responsibilities')}
       {renderStringList(opening.technologyRequirements, 'Technology Requirements')}

@@ -60,6 +60,11 @@ const navLists = [
         url: '/project-proposals/overview',
       },
       {
+        isExternal: true,
+        title: 'Blog',
+        url: 'https://thenewboston.blog/',
+      },
+      {
         title: 'Assets',
         url: '/assets',
       },
@@ -84,6 +89,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.reddit,
       SocialMedia.linkedin,
       SocialMedia.facebook,
+      SocialMedia.instagram,
       SocialMedia.twitter,
       SocialMedia.discord,
       SocialMedia.twitch,
