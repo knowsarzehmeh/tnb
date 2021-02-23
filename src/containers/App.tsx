@@ -6,6 +6,7 @@ import {Layout} from 'components';
 import AccountManager from './AccountManager';
 import Assets from './Assets';
 import BankApi from './BankApi';
+import Blog from './Blog';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
@@ -65,6 +66,8 @@ const App: FC = () => {
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/assets" component={Assets} />
+          <Route exact path="/blog" component={Blog} />
+          {/* <Route exact path="/blog/:slug" component={Blog} /> */}
           <Redirect exact from="/leaderboard" to="/leaderboard/All" />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />

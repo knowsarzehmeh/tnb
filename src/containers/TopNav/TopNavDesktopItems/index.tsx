@@ -65,7 +65,7 @@ const morePopoverItems: TopNavPopoverItemType[] = [
     iconType: IconType.textBox,
     isExternal: true,
     title: 'Blog',
-    to: 'https://thenewboston.blog/',
+    to: '/blog', // 'https://thenewboston.blog/'
   },
   {
     description: 'Download thenewboston assets',
