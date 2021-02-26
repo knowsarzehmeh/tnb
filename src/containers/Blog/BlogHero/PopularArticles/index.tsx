@@ -12,7 +12,7 @@ const PopularArticles: FC<ArticlesProps> = ({articles}) => {
     <div className="PopularArticles">
       <h3 className="PopularArticles__header">Popular Articles</h3>
       {articles.map((article) => (
-        <Article article={article} />
+        <Article key={article} article={article} />
       ))}
     </div>
   );

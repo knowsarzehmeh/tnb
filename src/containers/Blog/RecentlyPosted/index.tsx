@@ -14,7 +14,7 @@ const RecentlyPosted: FC<ArticlesProps> = ({articles}) => {
         <h3 className="RecentlyPosted__header">Recently Posted</h3>
         <div className="RecentlyPosted__article">
           {articles.map((article) => (
-            <Article article={article} />
+            <Article key={article} article={article} />
           ))}
         </div>
       </div>

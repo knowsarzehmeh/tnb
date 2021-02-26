@@ -63,7 +63,7 @@ const morePopoverItems: TopNavPopoverItemType[] = [
   {
     description: 'Stay updated on crypto and thenewboston',
     iconType: IconType.textBox,
-    isExternal: true,
+    // isExternal: true,
     title: 'Blog',
     to: '/blog', // 'https://thenewboston.blog/'
   },
