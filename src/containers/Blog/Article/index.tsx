@@ -36,6 +36,14 @@ const Article: FC<ComponentProps> = ({article}) => {
             <p>
               <span style={{fontWeight: 'bold'}}>Cryptoraphy</span>:The science of hiding information
             </p>
+            <p>
+              <span style={{fontWeight: 'bold'}}>Currency</span>:Accepted system of money
+            </p>
+            <p>
+              Think you can properly define what a cryptocurrency actually is now? Exactly, “Digital Currency” is
+              easier.
+            </p>
+            <h3>History</h3>
           </div>
         </div>
       </div>
