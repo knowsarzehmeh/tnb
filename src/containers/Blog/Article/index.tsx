@@ -33,6 +33,9 @@ const Article: FC<ComponentProps> = ({article}) => {
               Currency”. Well, yes, but no. Let’s start at the top. Basically, cryptocurrency is the usage of digital
               files as money/currency. The name is coined from two terms:
             </p>
+            <p>
+              <span style={{fontWeight: 'bold'}}>Cryptoraphy</span>:The science of hiding information
+            </p>
           </div>
         </div>
       </div>
