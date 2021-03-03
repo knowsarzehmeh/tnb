@@ -54,13 +54,25 @@ $gray-50: #f7fafc;
   &__inner-wrapper {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     max-width: 768px;
     width: 100%;
+
+    @media (min-width: 968px) {
+      flex-direction: row;
+    }
   }
 
   &__socials {
-    align-self: flex-start;
+    margin-top: 1rem;
+    order: 2;
+
+    @media (min-width: 968px) {
+      align-self: flex-start;
+      margin-top: unset;
+      order: 0;
+    }
   }
 
   & h3 {
@@ -83,7 +95,10 @@ $gray-50: #f7fafc;
   //   Forms
   &__form-wrapper {
     flex: 1;
-    margin-left: 6rem;
+
+    @media (min-width: 968px) {
+      margin-left: 6rem;
+    }
   }
 
   &__form {
