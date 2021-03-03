@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 import './PopularArticles.scss';
 
-interface ArticleProps {
+interface ComponentProps {
   article: {
     id: number;
     banner: string;
@@ -11,7 +11,7 @@ interface ArticleProps {
     readTime: string;
   };
 }
-const Article: FC<ArticleProps> = ({article}) => {
+const Article: FC<ComponentProps> = ({article}) => {
   return (
     <div className="PopularArticles__article-wrapper">
       <div className="PopularArticles__article-banner" />
