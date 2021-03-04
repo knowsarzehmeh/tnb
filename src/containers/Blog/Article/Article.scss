@@ -72,6 +72,7 @@ $gray-50: #f7fafc;
     // left: 20px;
     top: 33%;
     width: 178px;
+    z-index: 100;
   }
 
   &__Socials {
@@ -97,6 +98,7 @@ $gray-50: #f7fafc;
 
   &__Socials h3 {
     color: $gray-500;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
   }
