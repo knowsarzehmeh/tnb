@@ -8,6 +8,7 @@ $summary-width: 420px;
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 
   &__comparison-cards-container {
     width: $comparison-cards-container;
@@ -64,6 +65,16 @@ $summary-width: 420px;
 
     @media (max-width: 1200px) {
       max-width: unset;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .BlogHero {
+    &__content-container {
+      max-width: 100%;
+      padding: 0;
+      width: 100%;
     }
   }
 }

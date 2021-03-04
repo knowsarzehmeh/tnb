@@ -2,7 +2,7 @@ $comparison-cards-container: 690px;
 $content-container-padding-lr: 64px;
 $summary-mr: 70px;
 $summary-width: 420px;
-$sail-blue-900: #131F41;
+$sail-blue-900: #131f41;
 $gray-900: #042235;
 $gray-500: #697386;
 $gray-100: #e3e8ee;
@@ -65,12 +65,11 @@ $gray-50: #f7fafc;
     width: 100%;
   }
 
-
-  // Social Icon 
+  // Social Icon
   &__Socials__wrapper {
     position: fixed;
     // left: 20px;
-    top: 33%;
+    top: 13%;
     width: 178px;
     z-index: 100;
   }
@@ -89,7 +88,7 @@ $gray-50: #f7fafc;
 
   &__SocialMediaLink {
     color: $gray-500;
-    transition: .5s;
+    transition: 0.5s;
 
     &:hover {
       color: $sail-blue-900;
@@ -98,24 +97,24 @@ $gray-50: #f7fafc;
 
   &__Socials h3 {
     color: $gray-500;
-    font-weight: 500;
     font-size: 14px;
+    font-weight: 500;
     line-height: 1.5;
   }
 
   &__likes {
-    display: flex;
     align-items: center;
+    display: flex;
     padding: 1rem 0;
 
-     p {
+    p {
       color: $gray-500;
       font-size: 14px;
       margin-bottom: unset;
       margin-left: 1rem;
     }
   }
-  
+
   &__likes__thumbsUp {
     color: $gray-500;
   }
