@@ -37,9 +37,14 @@ $gray-50: #f7fafc;
     width: 100%;
 
     @media (max-width: 768px) {
-      margin-bottom: 3rem;
-      max-width: 480px;
-      padding: 32px;
+      //    margin-bottom: 3rem;
+      //    max-width: 480px;
+      //      padding: 32px;
+      margin-bottom: 120px;
+      padding: 0px;
+    }
+    @media (max-width: 450px) {
+      align-content: center;
     }
   }
 
@@ -49,6 +54,11 @@ $gray-50: #f7fafc;
     display: flex;
     justify-content: center;
     padding: 64px 0;
+  }
+  @media (max-width: 480px) {
+    &__wrapper {
+      display: block;
+    }
   }
 
   &__inner-wrapper {

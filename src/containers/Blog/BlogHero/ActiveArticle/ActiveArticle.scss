@@ -38,3 +38,9 @@ $gray-400: #8792a2;
     margin-left: 1rem;
   }
 }
+@media (max-width: 768px) {
+  .ActiveArticle {
+    height: 65vh;
+    max-width: 100%;
+  }
+}
