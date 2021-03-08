@@ -57,7 +57,6 @@ export const StyledSliderWrapper = styled.div<SliderWrapperProps>`
 
 export const StyledSlider = styled.div<SliderProps>`
   display: flex;
-  padding: 0 55px;
   transition: transform ${(props) => props.pageTransition}ms ease;
   :hover ${StyledSliderItem} {
     transform: translateX(${(props) => props.transformValue});

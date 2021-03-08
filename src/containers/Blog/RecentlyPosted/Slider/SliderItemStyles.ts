@@ -8,7 +8,6 @@ type Props = {
 };
 
 export const StyledSliderItem = styled.div<Props>`
-  margin: 0 ${(props) => props.slideMargin}px;
   transition: transform 500ms ease;
   cursor: pointer;
   width: 100%;
@@ -18,6 +17,9 @@ export const StyledSliderItem = styled.div<Props>`
   transform: scale(1);
   user-select: none;
   flex: 0 0 calc (100% / ${(props) => props.visibleSlides} - ${(props) => props.slideMargin * 2}px);
+  &:last-child {
+    margin-right: 15px;
+  }
   img {
     height: 100%;
     width: 100%;
