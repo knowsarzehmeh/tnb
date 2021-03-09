@@ -1,16 +1,18 @@
 import React, {FC} from 'react';
 import {PageTitle} from 'components';
 
+import {getArticles} from 'utils/data';
 import BlogHero from './BlogHero';
 import RecentlyPosted from './RecentlyPosted';
 import Subscribe from './Subscribe';
 
+const articles = getArticles();
 const Blog: FC = () => {
   return (
     <>
       <PageTitle title="blog" />
       <BlogHero />
-      <RecentlyPosted articles={[1, 2, 3, 4, 5]} />
+      <RecentlyPosted articles={articles} />
       <Subscribe />
     </>
   );
