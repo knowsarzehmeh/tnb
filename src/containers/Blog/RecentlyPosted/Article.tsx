@@ -4,9 +4,13 @@ import './RecentlyPosted.scss';
 
 interface ArticleProps {
   article: {
-    id: number;
+    id?: number;
+    title: string;
     banner: string;
-    user: string;
+    author: {
+      name: string;
+      avatar: string;
+    };
     datePosted: string;
     readTime: string;
   };
