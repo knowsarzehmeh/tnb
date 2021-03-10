@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {Link} from 'react-router-dom';
 import {Article as ArticleType} from 'types/blogs';
 import Article from './Article';
 import Slider from './Slider';

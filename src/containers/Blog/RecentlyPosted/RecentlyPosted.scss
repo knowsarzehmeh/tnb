@@ -88,6 +88,15 @@ $gray-100: #e3e8ee;
     }
   }
 
+  &__article-content a {
+    transition: .5s;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+
   &__summary-snippet-container {
     margin-right: $summary-mr;
     width: $summary-width;

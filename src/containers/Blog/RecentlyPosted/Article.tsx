@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
+import {Link} from 'react-router-dom';
 import {Article as ArticleType} from 'types/blogs';
+import {slugify} from 'utils/urls';
 
 import './RecentlyPosted.scss';
 
@@ -20,12 +22,14 @@ interface ArticleProps {
 const Article: FC<ArticleProps> = ({article}) => {
   return (
     <div className="RecentlyPosted__article-wrapper">
-      <div className="RecentlyPosted__article-banner" />
+      {/* <div className="RecentlyPosted__article-banner" /> */}
       <div className="RecentlyPosted__article-content">
-        <h3 className="RecentlyPosted__article-title">{article.title}</h3>
+        <Link to={`/blog/${slugify(article.title, ' ', '-')}`}>
+          <h3 className="RecentlyPosted__article-title">{article.title}</h3>
+        </Link>
         <p className="RecentlyPosted__article-user">by {article.author.name}</p>
         <p className="RecentlyPosted__article-date">
-          Feb 17
+          {article.datePosted}
           <span className="RecentlyPosted__article-time">6 min read</span>
         </p>
       </div>
