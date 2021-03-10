@@ -40,6 +40,11 @@ $gray-50: #f7fafc;
     margin-bottom: 1.5rem;
   }
 
+  &__user {
+    margin-top: 8px;
+    margin-left: .5rem;
+  }
+
   &__user,
   &__date,
   &__time {
