@@ -17,9 +17,11 @@ export const getArticles = (): Article[] => {
 };
 
 export const getArticleByTitle = (title: string): Article | undefined => {
-  const singleArticle: Article | undefined = getArticles().find((article) => article.title === title);
+  const singleArticle: Article | undefined = getArticles().find(
+    (article) => article.title.toLowerCase() === title.toLowerCase(),
+  );
   return singleArticle;
-}
+};
 
 export const getContributors = (): Contributor[] => {
   return contributors;

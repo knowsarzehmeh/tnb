@@ -27,10 +27,13 @@ const Article: FC<ArticleProps> = ({article}) => {
         <Link to={`/blog/${slugify(article.title, ' ', '-')}`}>
           <h3 className="RecentlyPosted__article-title">{article.title}</h3>
         </Link>
-        <p className="RecentlyPosted__article-user">by {article.author.name}</p>
+        <div className="RecentlyPosted__author-wrapper">
+          <img className="RecentlyPosted__author-avatar" src={article.author.avatar} alt={article.author.name} />
+          <p className="RecentlyPosted__article-user">by {article.author.name}</p>
+        </div>
         <p className="RecentlyPosted__article-date">
           {article.datePosted}
-          <span className="RecentlyPosted__article-time">6 min read</span>
+          <span className="RecentlyPosted__article-time">{article.readTime}</span>
         </p>
       </div>
     </div>

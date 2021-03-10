@@ -8,4 +8,5 @@ export interface Article {
   content: string;
   datePosted: string;
   author: Author;
+  readTime: string;
 }
