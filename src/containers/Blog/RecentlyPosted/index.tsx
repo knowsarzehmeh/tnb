@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
+import {Article as ArticleType} from 'types/blogs';
 import Article from './Article';
 import Slider from './Slider';
 import './RecentlyPosted.scss';
 
 interface ArticlesProps {
-  articles: any[];
+  articles: ArticleType[];
 }
 const sliderProps = {
   maxVisibleSlides: 3,
@@ -22,7 +23,7 @@ const RecentlyPosted: FC<ArticlesProps> = ({articles}) => {
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider {...sliderProps}>
             {articles.map((article) => (
-              <Article key={article} article={article} />
+              <Article key={article.title} article={article} />
             ))}
           </Slider>
         </div>

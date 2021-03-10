@@ -65,12 +65,31 @@ $gray-100: #e3e8ee;
     margin: 1rem 0;
   }
 
+
+  &__author-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &__author-avatar {
+    border-radius: 50%  !important;
+    width: 30px  !important;
+    height: 30px !important;
+  }
+
+  &__article-user {
+    display: inline-block;
+    margin-left: .5rem;
+  }
+
   &__article-user,
   &__article-date,
   &__article-time {
     font-size: 12px;
     margin-bottom: 8px;
   }
+  
 
   &__article-date {
     margin: 0;
@@ -87,6 +106,17 @@ $gray-100: #e3e8ee;
       display: block;
     }
   }
+
+  &__article-content a {
+    transition: .5s;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+
+
 
   &__summary-snippet-container {
     margin-right: $summary-mr;

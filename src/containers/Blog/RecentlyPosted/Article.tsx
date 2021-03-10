@@ -1,30 +1,39 @@
 import React, {FC} from 'react';
+import {Link} from 'react-router-dom';
+import {Article as ArticleType} from 'types/blogs';
+import {slugify} from 'utils/urls';
 
 import './RecentlyPosted.scss';
 
+// {
+//   id?: number;
+//   title: string;
+//   banner: string;
+//   author: {
+//     name: string;
+//     avatar: string;
+//   };
+//   datePosted: string;
+//   readTime: string;
+// };
 interface ArticleProps {
-  article: {
-    id?: number;
-    title: string;
-    banner: string;
-    author: {
-      name: string;
-      avatar: string;
-    };
-    datePosted: string;
-    readTime: string;
-  };
+  article: ArticleType;
 }
 const Article: FC<ArticleProps> = ({article}) => {
   return (
     <div className="RecentlyPosted__article-wrapper">
-      <div className="RecentlyPosted__article-banner" />
+      {/* <div className="RecentlyPosted__article-banner" /> */}
       <div className="RecentlyPosted__article-content">
-        <h3 className="RecentlyPosted__article-title">Summary of the history and uses of cryptocurrency.</h3>
-        <p className="RecentlyPosted__article-user">by John Doe</p>
+        <Link to={`/blog/${slugify(article.title, ' ', '-')}`}>
+          <h3 className="RecentlyPosted__article-title">{article.title}</h3>
+        </Link>
+        <div className="RecentlyPosted__author-wrapper">
+          <img className="RecentlyPosted__author-avatar" src={article.author.avatar} alt={article.author.name} />
+          <p className="RecentlyPosted__article-user">by {article.author.name}</p>
+        </div>
         <p className="RecentlyPosted__article-date">
-          Feb 17
-          <span className="RecentlyPosted__article-time">6 min read</span>
+          {article.datePosted}
+          <span className="RecentlyPosted__article-time">{article.readTime}</span>
         </p>
       </div>
     </div>

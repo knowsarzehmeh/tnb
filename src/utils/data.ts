@@ -1,14 +1,27 @@
 import parse from 'date-fns/parse';
 import {TEAMS} from 'constants/teams';
+import {Article} from 'types/blogs';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
 import {NavOption} from 'types/option';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
+import articles from 'data/blogs.json';
 import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
+
+export const getArticles = (): Article[] => {
+  return articles;
+};
+
+export const getArticleByTitle = (title: string): Article | undefined => {
+  const singleArticle: Article | undefined = getArticles().find(
+    (article) => article.title.toLowerCase() === title.toLowerCase(),
+  );
+  return singleArticle;
+};
 
 export const getContributors = (): Contributor[] => {
   return contributors;
