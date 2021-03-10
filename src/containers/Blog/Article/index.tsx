@@ -1,21 +1,29 @@
+import React, {FC, useEffect} from 'react';
+import {RouteChildrenProps} from 'react-router-dom';
 import {Icon, IconType, SocialMediaIcon} from 'components';
-import React, {FC} from 'react';
+import {Article as ArticleType} from 'types/blogs';
 import {SocialMedia} from 'types/social-media';
 
 import './Article.scss';
 
-interface ComponentProps {
-  article: {
-    id: number;
-    banner: string;
-    user: string;
-    datePosted: string;
-    readTime: string;
-    body: string;
-  };
-}
+// {
+//   id: number;
+//   banner: string;
+//   user: string;
+//   datePosted: string;
+//   readTime: string;
+//   body: string;
+// };
 
-const Article: FC<ComponentProps> = ({article}) => {
+// interface ComponentProps {
+//   article: ArticleType;
+// }
+
+const Article: FC<RouteChildrenProps> = (props) => {
+  useEffect(() => {
+    const {match} = props;
+    // console.log(match?.params.slug);
+  }, [props]);
   const renderSocialMediaLinks = () =>
     [SocialMedia.linkedin, SocialMedia.facebook, SocialMedia.twitter, SocialMedia.instagram].map((website) => (
       <SocialMediaIcon className="Article__SocialMediaLink" iconSize={28} key={website} website={website} />
