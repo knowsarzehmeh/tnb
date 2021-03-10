@@ -22,7 +22,7 @@ interface ArticleProps {
 const Article: FC<ArticleProps> = ({article}) => {
   return (
     <div className="RecentlyPosted__article-wrapper">
-      {/* <div className="RecentlyPosted__article-banner" /> */}
+      <div className="RecentlyPosted__article-banner" />
       <div className="RecentlyPosted__article-content">
         <Link to={`/blog/${slugify(article.title, ' ', '-')}`}>
           <h3 className="RecentlyPosted__article-title">{article.title}</h3>
