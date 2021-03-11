@@ -22,6 +22,11 @@ export const getArticleByTitle = (title: string): Article | undefined => {
   );
   return singleArticle;
 };
+export const sortByLatest = (array: any[]): any => {
+  return array.reduce((b, a) => {
+    return b.datePosted > a.datePosted ? b : a;
+  });
+};
 
 export const getContributors = (): Contributor[] => {
   return contributors;
