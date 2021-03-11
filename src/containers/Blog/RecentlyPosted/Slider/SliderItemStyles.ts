@@ -23,7 +23,7 @@ export const StyledSliderItem = styled.div<Props>`
   img {
     height: 100%;
     width: 100%;
-    border-radius: 1.5vw;
+    border-radius: 3%;
     box-sizing: border-box;
   }
   :hover {
