@@ -23,9 +23,11 @@ interface CurrentArticleProps {
 const ActiveArticle: FC<ArticleProps> = ({articles}) => {
   const currentArticle = sortByLatest(articles);
   const format = new Date(currentArticle.datePosted);
+
   return (
     <>
-      <div className="ActiveArticle">
+      <div style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover'}} className="ActiveArticle">
+        <div className="ActiveArticle__banner-overlay" />
         <div className="ActiveArticle__container">
           <Link to={`/blog/${slugify(currentArticle.title, ' ', '-')}`}>
             <h3 className="ActiveArticle__title">{currentArticle.title}</h3>
