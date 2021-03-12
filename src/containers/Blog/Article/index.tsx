@@ -23,7 +23,7 @@ interface RouteParams {
 const Article: FC = () => {
   const {slug} = useParams<RouteParams>();
 
-  const article = useMemo(() => getArticleByTitle(slugify(slug, '-', ' ')), [slug]);
+  const article = useMemo(() => getArticleByTitle(decodeURIComponent(slugify(slug, '-', ' '))), [slug]);
 
   const renderSocialMediaLinks = () =>
     [SocialMedia.linkedin, SocialMedia.facebook, SocialMedia.twitter, SocialMedia.instagram].map((website) => (
