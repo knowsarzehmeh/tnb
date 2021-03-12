@@ -26,7 +26,7 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
 
   return (
     <>
-      <div style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover'}} className="ActiveArticle">
+      <div style={{background: `url(${currentArticle.banner})`, backgroundSize: '100% 100%'}} className="ActiveArticle">
         <div className="ActiveArticle__banner-overlay" />
         <div className="ActiveArticle__container">
           <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`}>

@@ -50,7 +50,10 @@ const Article: FC = () => {
                 <span className="Article__time">{article?.readTime}</span>
               </p>
             </div>
-            <div style={{background: `url(${article?.banner})`, backgroundSize: 'cover'}} className="Article__banner" />
+            <div
+              style={{background: `url(${article?.banner})`, backgroundSize: '100% 100%'}}
+              className="Article__banner"
+            />
             <div className="Article__body" dangerouslySetInnerHTML={{__html: article?.content as string}} />
           </div>
         </div>
