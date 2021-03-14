@@ -11,6 +11,7 @@ import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
+import {shuffle} from './shuffle';
 
 export const getArticles = (): Article[] => {
   return articles;
@@ -22,10 +23,21 @@ export const getArticleByTitle = (title: string): Article | undefined => {
   );
   return singleArticle;
 };
-export const sortByLatest = (array: any[]): any => {
+
+export const sortByLatest = (array: Article[]): Article => {
   return array.reduce((b, a) => {
     return b.datePosted > a.datePosted ? b : a;
   });
+};
+
+export const getPopularArticles = (): Article[] => {
+  const allArticles = getArticles();
+  const latestArticle = sortByLatest(allArticles);
+  const popularArticles: Article[] = allArticles
+    .filter((a) => a.title.toLowerCase() !== latestArticle.title.toLowerCase())
+    .slice(0, 4);
+
+  return shuffle(popularArticles);
 };
 
 export const getContributors = (): Contributor[] => {
