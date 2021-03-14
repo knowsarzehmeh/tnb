@@ -32,14 +32,12 @@ export const sortByLatest = (array: Article[]): Article => {
 
 export const getPopularArticles = (): Article[] => {
   const allArticles = getArticles();
-  const currentArticle = sortByLatest(allArticles);
-
+  const latestArticle = sortByLatest(allArticles);
   const popularArticles: Article[] = allArticles
-    .filter((a) => a.title.toLowerCase() !== currentArticle.title.toLowerCase())
+    .filter((a) => a.title.toLowerCase() !== latestArticle.title.toLowerCase())
     .slice(0, 4);
 
-  setInterval(() => shuffle(popularArticles), 1000);
-  return popularArticles;
+  return shuffle(popularArticles);
 };
 
 export const getContributors = (): Contributor[] => {
