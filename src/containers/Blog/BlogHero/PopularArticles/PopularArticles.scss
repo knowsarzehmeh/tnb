@@ -63,9 +63,16 @@ $gray-100: #e3e8ee;
     height: 96px;
     margin-right: 1rem;
     width: 96px;
+
+    img {
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__article-title {
+    color: #697386 ;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 1rem;

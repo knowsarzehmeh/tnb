@@ -1,11 +1,13 @@
 import React, {FC} from 'react';
-import {getArticles} from 'utils/data';
+import {getArticles, getPopularArticles} from 'utils/data';
+import {Article} from 'types/blogs';
 import ActiveArticle from './ActiveArticle';
 import PopularArticles from './PopularArticles';
 
 import './BlogHero.scss';
 
 const articles = getArticles();
+const popularArticles: Article[] = getPopularArticles();
 
 const BlogHero: FC = () => {
   return (
@@ -13,7 +15,7 @@ const BlogHero: FC = () => {
       <div className="BlogHero__content-container">
         <div className="BlogHero__article-container">
           <ActiveArticle articles={articles} />
-          <PopularArticles articles={[1, 2, 3, 4]} />
+          <PopularArticles articles={popularArticles} />
         </div>
       </div>
     </div>
