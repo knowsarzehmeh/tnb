@@ -25,8 +25,11 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
   const format = new Date(currentArticle.datePosted);
 
   return (
-    <>
-      <div style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover'}} className="ActiveArticle">
+    <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`} className="ActiveArticle">
+      <div
+        // eslint-disable-next-line sort-keys
+        style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover', width: '100%', height: '100%'}}
+      >
         <div className="ActiveArticle__banner-overlay" />
         <div className="ActiveArticle__container">
           <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`}>
@@ -39,7 +42,7 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
