@@ -19,7 +19,7 @@ $summary-width: 420px;
   }
 
   &__content-container {
-    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
+    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 4;
     padding: 64px;
     width: 100%;
 

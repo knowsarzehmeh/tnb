@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-shadow */
 import React, {useState, useEffect, useRef} from 'react';
-
+// Components
 import SliderItem from './SliderItem';
-
+// Styles
 import {StyledSliderWrapper, StyledSlider} from './SliderStyles';
-
+// Types
 type SliderProps = {
   children?: any;
   zoomFactor: number;
@@ -15,8 +17,9 @@ type SliderProps = {
 const numberOfSlides = (maxVisibleSlides: number, windowWidth: number) => {
   if (windowWidth > 1200) return maxVisibleSlides;
   if (windowWidth > 992) return 4;
-  if (windowWidth > 768) return 3;
-  return 2;
+  if (windowWidth > 768) return 4;
+  if (windowWidth < 425) return 1;
+  return 3;
 };
 
 const Slider: React.FC<SliderProps> = ({children, zoomFactor, slideMargin, maxVisibleSlides, pageTransition}) => {
@@ -26,11 +29,10 @@ const Slider: React.FC<SliderProps> = ({children, zoomFactor, slideMargin, maxVi
 
   const sliderRef = useRef<HTMLElement>(null);
 
-  const visibleSlides = numberOfSlides(maxVisibleSlides, scrollSize); // 3 i 0
+  const visibleSlides = numberOfSlides(maxVisibleSlides, scrollSize);
   const totalPages: number = Math.ceil(children.length / visibleSlides) - 1;
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const resizeObserver = new ResizeObserver((entries) => {
       setScrollSize(entries[0].contentRect.width);
@@ -38,13 +40,16 @@ const Slider: React.FC<SliderProps> = ({children, zoomFactor, slideMargin, maxVi
     resizeObserver.observe(sliderRef.current);
   }, [sliderRef]);
 
+  // Position slider on resize
   useEffect(() => {
     if (sliderRef && sliderRef.current) {
       if (currentPage > totalPages) setCurrentPage(totalPages);
-      sliderRef.current.style.transform = `translate3D(-${currentPage * scrollSize}px, , 0)`;
+      sliderRef.current.style.transform = `translate3D(-${currentPage * scrollSize}px, 0, 0)`;
     }
   }, [sliderRef, currentPage, scrollSize, totalPages]);
 
+  // Have to disable hover effect on slides when flipping page
+  // Otherwise it will look ugly when mouse hovers over the slides
   const disableHoverEffect = () => {
     if (sliderRef.current) sliderRef.current.style.pointerEvents = 'none';
     setTimeout(() => {
@@ -61,15 +66,14 @@ const Slider: React.FC<SliderProps> = ({children, zoomFactor, slideMargin, maxVi
   };
 
   const handleMouseOver = (id: number) => {
-    if (id % visibleSlides === 1) setTransformValue('0%');
-    if (id % visibleSlides === 0) setTransformValue(`-${zoomFactor}%`);
+    if (id % visibleSlides === 1) setTransformValue('0%'); // left
+    if (id % visibleSlides === 0) setTransformValue(`-${zoomFactor}%`); // right
   };
 
   const handleMouseOut = () => {
     setTransformValue(`-${zoomFactor / 2}%`);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-shadow
   const assignSlideClass = (index: number, visibleSlides: number) => {
     const classes = ['right', 'left'];
     return classes[index % visibleSlides] || '';
