@@ -25,8 +25,10 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
   const format = new Date(currentArticle.datePosted);
 
   return (
-    <>
-      <div style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover'}} className="ActiveArticle">
+    <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`} className="ActiveArticle">
+      <div
+        style={{background: `url(${currentArticle.banner})`, backgroundSize: 'cover', height: '100%', width: '100%'}}
+      >
         <div className="ActiveArticle__banner-overlay" />
         <div className="ActiveArticle__container">
           <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`}>
@@ -39,7 +41,7 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
