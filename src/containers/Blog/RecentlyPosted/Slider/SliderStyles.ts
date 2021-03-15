@@ -44,6 +44,7 @@ export const StyledSliderWrapper = styled.div<SliderWrapperProps>`
     }
   }
   .back {
+    top: -20px;
     @media (max-width: 768px) {
       left: 5px;
     }
@@ -51,7 +52,8 @@ export const StyledSliderWrapper = styled.div<SliderWrapperProps>`
     border-radius: 0 1.5vw 1.5vw 0;
   }
   .forward {
-    right: 0;
+    right: 25px;
+    top: -20px;
     border-radius: 1.5vw 0 0 1.5vw;
   }
 `;
