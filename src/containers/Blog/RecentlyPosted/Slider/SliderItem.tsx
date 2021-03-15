@@ -1,5 +1,5 @@
 import React from 'react';
-
+// Styles
 import {StyledSliderItem} from './SliderItemStyles';
 
 type SliderItemProps = {

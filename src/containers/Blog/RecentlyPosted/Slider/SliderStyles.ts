@@ -17,40 +17,43 @@ type SliderProps = {
 
 export const StyledSliderWrapper = styled.div<SliderWrapperProps>`
   overflow: hidden;
-  position: relative;
-  background: #fff;
   padding: ${(props) => `${(props.zoomFactor / props.visibleSlides) * 0.7}%`} 0;
   .button-wrapper {
     position: absolute;
-    width: 35px;
-    height: 50%;
-    top: 5%;
+    width: 55px;
+    height: 100%;
+    top: 0;
     padding: ${(props) => `${props.zoomFactor / 7}%`} 0;
     box-sizing: border-box;
   }
   .button {
-    background: none;
+    background: transparent;
     display: block;
     border: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 65%;
     font-size: 3rem;
     font-weight: 800;
     cursor: pointer;
     outline: none;
-    transition: all 0.4s;
+    transition: all 0.7s;
     user-select: none;
     :hover {
       opacity: 0.5;
     }
   }
   .back {
-    left: 0;
+    top: -20px;
+    @media (max-width: 768px) {
+      left: 5px;
+    }
+    left: 25px;
     border-radius: 0 1.5vw 1.5vw 0;
   }
   .forward {
-    right: 0;
+    right: 25px;
+    top: -20px;
     border-radius: 1.5vw 0 0 1.5vw;
   }
 `;

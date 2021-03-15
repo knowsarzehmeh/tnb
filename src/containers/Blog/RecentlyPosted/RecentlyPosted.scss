@@ -29,54 +29,68 @@ $gray-100: #e3e8ee;
   }
 
   &__content-container {
-    // margin-bottom: 5rem;
+    margin-bottom: 5rem;
     max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
-    padding: 64px;
+    padding: 35px;
     width: 100%;
 
     @media (max-width: 768px) {
       margin-bottom: 3rem;
-      max-width: 700px;
-      padding: 32px;
+      max-width: 800px;
+      padding: 40px;
+    }
+
+    @media (max-width: 480px) {
+      margin: 0;
     }
   }
 
   &__article {
     display: flex;
-    // margin-bottom: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__slider-container {
+    max-width: 1200px;
   }
 
   &__article-wrapper {
-    margin-right: 1rem;
+    margin: 0;
+
+    @media (min-width: 325px) and (max-width: 480px) {
+      margin-left: 55px;
+    }
   }
 
   &__article-banner {
-    // height: 100%;
-    height: 240px;
-    width: 240px;
-    // width: 100%;
-  }
+    height: 180px;
+    width: 280px;
 
+    @media (max-width: 768px) {
+      max-width: 220px;
+    }
+  }
 
   &__article-title {
     color: #000;
     font-size: 16px;
     line-height: 1.3;
     margin: 1rem 0;
-    width: 240px;
   }
-
-
   &__author-wrapper {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-bottom: .5rem;
   }
 
   &__author-avatar {
-    border-radius: 50% !important;
-    width: 30px !important;
-    height: 30px !important;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
   }
 
   &__article-user {
@@ -91,9 +105,15 @@ $gray-100: #e3e8ee;
     margin-bottom: 8px;
   }
 
-
   &__article-date {
     margin: 0;
+  }
+   &__article-content a {
+    transition: .5s;
+
+    &:hover {
+      color: red;
+    }
   }
 
   &__article-time {
@@ -107,17 +127,6 @@ $gray-100: #e3e8ee;
       display: block;
     }
   }
-
-  &__article-content a {
-    transition: .5s;
-
-    &:hover {
-      color: red;
-    }
-  }
-
-
-
 
   &__summary-snippet-container {
     margin-right: $summary-mr;
@@ -148,5 +157,9 @@ $gray-100: #e3e8ee;
     @media (max-width: 1200px) {
       max-width: unset;
     }
+  }
+
+  &__author-avatar {
+    max-width: 10%;
   }
 }

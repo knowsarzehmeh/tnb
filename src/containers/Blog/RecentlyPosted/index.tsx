@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, {FC} from 'react';
 import {Article as ArticleType} from 'types/blogs';
 import Article from './Article';
@@ -9,8 +10,8 @@ interface ArticlesProps {
 }
 const sliderProps = {
   maxVisibleSlides: 3,
-  pageTransition: 250,
-  slideMargin: 15,
+  pageTransition: 850,
+  slideMargin: 5,
   zoomFactor: 1,
 };
 
@@ -21,11 +22,13 @@ const RecentlyPosted: FC<ArticlesProps> = ({articles}) => {
         <h3 className="RecentlyPosted__header">Recently Posted</h3>
         <div className="RecentlyPosted__article">
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Slider {...sliderProps}>
-            {articles.map((article) => (
-              <Article key={article.title} article={article} />
-            ))}
-          </Slider>
+          <div className="RecentlyPosted__slider-container">
+            <Slider {...sliderProps}>
+              {articles.map((article) => (
+                <Article key={article.title} article={article} />
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </div>
