@@ -29,18 +29,23 @@ const Article: FC = () => {
 
   const article = useMemo(() => getArticleByTitle(decodeURIComponent(slugify(slug, '-', ' '))), [slug]);
 
+  const socials = [
+    {icon: SocialMedia.linkedin, url: ''},
+    {icon: SocialMedia.facebook, url: 'https://www.facebook.com/sharer/sharer.php?u='},
+    {icon: SocialMedia.twitter, url: 'https://twitter.com/intent/tweet?url='},
+    {icon: SocialMedia.instagram, url: ''},
+  ];
+
   const renderSocialMediaLinks = () =>
-    [SocialMedia.linkedin, SocialMedia.facebook, SocialMedia.twitter, SocialMedia.instagram].map((website) => (
-      <SocialMediaIcon className="Article__SocialMediaLink" iconSize={28} key={website} website={website} />
+    socials.map((media) => (
+      // <SocialMediaIcon className="Article__SocialMediaLink" iconSize={28} key={website} website={website} />
+      <A href={media.url + window.location.href}>
+        <Icon icon={IconType[media.icon]} className="Article__SocialMediaLink" />
+      </A>
     ));
 
   const renderSocialMediaLinksMobile = () =>
-    [
-      {icon: SocialMedia.linkedin, url: ''},
-      {icon: SocialMedia.facebook, url: 'https://www.facebook.com/sharer/sharer.php?u='},
-      {icon: SocialMedia.twitter, url: 'https://twitter.com/intent/tweet?url='},
-      {icon: SocialMedia.instagram, url: ''},
-    ].map((media) => (
+    socials.map((media) => (
       <div className="Article__SocialMediaLinkWrapper">
         {/* <SocialMediaIcon className="Article__SocialMediaLinkMobile" iconSize={20} key={website} website={website} /> */}
         {/* <span className="Article__SocialMediaLinkLabel">{website}</span> */}
