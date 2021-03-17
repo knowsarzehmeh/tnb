@@ -39,6 +39,7 @@ import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
+import ShareCirlceIcon from 'mdi-react/ShareCircleIcon';
 import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
@@ -88,6 +89,7 @@ export enum IconType {
   radioboxBlank,
   radioboxMarked,
   reddit,
+  shareCircle,
   slack,
   sortAscending,
   sortDescending,
@@ -188,6 +190,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <RadioboxMarkedIcon {...iconProps} />;
         case IconType.reddit:
           return <RedditIcon {...iconProps} />;
+        case IconType.shareCircle:
+          return <ShareCirlceIcon {...iconProps} />;
         case IconType.slack:
           return <SlackIcon {...iconProps} />;
         case IconType.sortAscending:

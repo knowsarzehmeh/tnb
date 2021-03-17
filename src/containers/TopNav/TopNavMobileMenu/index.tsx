@@ -109,7 +109,7 @@ const TopNavMobileMenu = () => {
             'More',
             <>
               {renderMobileLink('Project Proposals', '/project-proposals/overview')}
-              {renderMobileLink('Blog', 'https://thenewboston.blog/', true)}
+              {renderMobileLink('Blog', '/blog')}
               {renderMobileLink('Assets', '/assets')}
               {renderMobileLink('FAQ', '/faq')}
               {renderMobileLink('Donate', '/donate')}
