@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, {FC, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {Icon, IconType, SocialMediaIcon} from 'components';
+import {A, Icon, IconType, SocialMediaIcon} from 'components';
 import {SocialMedia} from 'types/social-media';
 
 import './Article.scss';
@@ -35,10 +35,18 @@ const Article: FC = () => {
     ));
 
   const renderSocialMediaLinksMobile = () =>
-    [SocialMedia.linkedin, SocialMedia.facebook, SocialMedia.twitter, SocialMedia.instagram].map((website) => (
+    [
+      {icon: SocialMedia.linkedin, url: ''},
+      {icon: SocialMedia.facebook, url: 'https://www.facebook.com/sharer/sharer.php?u='},
+      {icon: SocialMedia.twitter, url: 'https://twitter.com/intent/tweet?url='},
+      {icon: SocialMedia.instagram, url: ''},
+    ].map((media) => (
       <div className="Article__SocialMediaLinkWrapper">
-        <SocialMediaIcon className="Article__SocialMediaLink" iconSize={20} key={website} website={website} />
-        <span className="Article__SocialMediaLinkLabel">{website}</span>
+        {/* <SocialMediaIcon className="Article__SocialMediaLinkMobile" iconSize={20} key={website} website={website} /> */}
+        {/* <span className="Article__SocialMediaLinkLabel">{website}</span> */}
+        <A href={media.url + window.location.href}>
+          <Icon icon={IconType[media.icon]} className="Article__SocialMediaLinkMobile" />
+        </A>
       </div>
     ));
 
@@ -62,6 +70,10 @@ const Article: FC = () => {
                     className="Article__SocialMediaShareBtn"
                     onClick={() => toggleSocialVisible()}
                   />
+                  {/* <div className="Article__likes-mobile">
+                    <Icon size={25} icon={IconType.thumbsUp} className="Article__likes__thumbsUp" />
+                    <span>1232</span>
+                  </div> */}
                   <div className={`Article__social-mobile ${socailVisible && 'visible'}`}>
                     {renderSocialMediaLinksMobile()}
                   </div>
