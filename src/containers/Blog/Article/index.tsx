@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React, {FC, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import {A, Icon, IconType, SocialMediaIcon} from 'components';
+import {A, Icon, IconType} from 'components';
 import {SocialMedia} from 'types/social-media';
 
 import './Article.scss';
@@ -38,7 +38,6 @@ const Article: FC = () => {
 
   const renderSocialMediaLinks = () =>
     socials.map((media) => (
-      // <SocialMediaIcon className="Article__SocialMediaLink" iconSize={28} key={website} website={website} />
       <A href={media.url + window.location.href}>
         <Icon icon={IconType[media.icon]} className="Article__SocialMediaLink" />
       </A>
@@ -47,8 +46,6 @@ const Article: FC = () => {
   const renderSocialMediaLinksMobile = () =>
     socials.map((media) => (
       <div className="Article__SocialMediaLinkWrapper">
-        {/* <SocialMediaIcon className="Article__SocialMediaLinkMobile" iconSize={20} key={website} website={website} /> */}
-        {/* <span className="Article__SocialMediaLinkLabel">{website}</span> */}
         <A href={media.url + window.location.href}>
           <Icon icon={IconType[media.icon]} className="Article__SocialMediaLinkMobile" />
         </A>
