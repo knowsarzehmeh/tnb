@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import {PageTitle} from 'components';
 
 import {getArticles} from 'utils/data';
@@ -18,4 +18,4 @@ const Blog: FC = () => {
   );
 };
 
-export default Blog;
+export default memo(Blog);
