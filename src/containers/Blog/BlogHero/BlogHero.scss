@@ -31,9 +31,11 @@ $summary-width: 420px;
 
   &__article-container {
     display: flex;
+    flex-direction: column;
 
-    @media (max-width: 1200px) {
-      display: block;
+    @media (min-width: 992px) {
+      // display: block;
+      flex-direction: row;
     }
   }
 

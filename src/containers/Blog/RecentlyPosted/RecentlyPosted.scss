@@ -9,6 +9,7 @@ $gray-100: #e3e8ee;
   align-items: center;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   position: relative;
 
   &__header {
@@ -111,9 +112,9 @@ $gray-100: #e3e8ee;
    &__article-content a {
     transition: .5s;
 
-    &:hover {
+      &:hover {
       color: red;
-    }
+      }
   }
 
   &__article-time {
